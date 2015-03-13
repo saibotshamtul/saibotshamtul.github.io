@@ -1,0 +1,11 @@
+<svg width="150" height="100" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:svg="http://www.w3.org/2000/svg">
+
+<rect x="0" y="0" width="150" height="100" fill="#ddd" />
+<line x1="0" y1="50" x2="150" y2="50" style="stroke:#0F0;stroke-width:1" />
+<text x="5" y="54" fill="red" style="font-size:16px">GOAL</text>
+<text x="60" y="50" fill="black" style="font-size:30px">Text</text>
+
+</svg>
