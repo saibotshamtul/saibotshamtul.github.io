@@ -26,9 +26,9 @@ xmlns:svg="http://www.w3.org/2000/svg">
 <polyline points="320,80 330,80 330,20,340,20,340,80,350,80,350,20,360,20,360,80,370,80,370,20,380,20,380,80
 390,80,390,20,400,20,400,80,410,80,410,20,420,20,420,80,430,80,430,20,440,20,440,80,450,80,450,20,460,20,
 460,80,470,80,470,20" style="fill:none;stroke:red;stroke-width:1" />
-<text x="330" y="110" fill="black" style="font-size:10px;">0 sent 20 times, 
-<tspan x="330" y="120">60 sent 20 times,</tspan>
+<text x="330" y="110" fill="black" style="font-size:10px;">0 sent 10 times, 
+<tspan x="330" y="120">60 sent 10 times,</tspan>
 <tspan x="330" y="130">repeat</tspan>
-<tspan x="330" y="10">[0,20,60,20]</tspan></text>
+<tspan x="330" y="10">[0,10,60,10]</tspan></text>
 
 </svg>
