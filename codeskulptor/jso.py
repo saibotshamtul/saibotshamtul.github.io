@@ -1,290 +1,290 @@
-#from user38_mWnmPo5ajIjQoKZ import *
+#sebz hfre38_zJazCb5nwVwDbXM vzcbeg *
 
-#independent Javascript Object class so we don't have to be so explicit
-class jso():
-    def __init__(self,var=type("","",file("code")),name=""):
-        self.w = type(type("","","jso var").v,"",var) #named after the window variable
-        self.v = var		#the var that we're using to create a new instance
-        self.n = name		#the name of this var, used for debugging
-    def __str__(self):
-        return str(self.v)#+" {"+self.n+"}"
-    def __getattr__(self,x): #x is the key
-        #print "<get "+SkPy(x)+">",
+#vaqrcraqrag Wninfpevcg Bowrpg pynff fb jr qba'g unir gb or fb rkcyvpvg
+pynff wfb():
+    qrs __vavg__(frys,ine=glcr("","",svyr("pbqr")),anzr=""):
+        frys.j = glcr(glcr("","","wfb ine").i,"",ine) #anzrq nsgre gur jvaqbj inevnoyr
+        frys.i = ine		#gur ine gung jr'er hfvat gb perngr n arj vafgnapr
+        frys.a = anzr		#gur anzr bs guvf ine, hfrq sbe qrohttvat
+    qrs __fge__(frys):
+        erghea fge(frys.i)#+" {"+frys.a+"}"
+    qrs __trgngge__(frys,k): #k vf gur xrl
+        #cevag "<trg "+FxCl(k)+">",
 
-        SkPy = type("","",type("","",type("","",file("code")).Sk).ffi).remapToPy
-        #if x is already a property of self, return it
-        if SkPy(x) in dir(self):
-            r = getattr(self,SkPy(x))
-            return r
-        #this property has not been retrieved yet, try to return a jso object of that property
-        try:
-            r = getattr(self.w,SkPy(x))
-            return jso(r,(self.n+"." if len(self.n)>0 else "")+SkPy(x))
-        except:
-            return None
-    def __call__(self,*args):
-        d = 0
-        if d:print "<call",self.n,
-        b = 0
-        try:
-            a = self.v(*(type("","",x).v for x in args))
-            b,c = ".v(.v)",a
-        except:
-            try:
-                a = self.v(*(x for x in args))
-                b,c = ".v()",a
-            except:
-                try:
-                    a = self.w(*(type("","",x).v for x in args))
-                    b,c = ".w(.v)",a
-                except:
-                    a = self.w(*(x for x in args))
-                    b,c = ".w()",a
-        if d:print b,">"
-        return a
-    def __getitem__(self, key):
-        r = getattr(self.w,key)
-        return jso(r,(self.n+"." if len(self.n)>0 else "")+key)
-    def __setattr__(self,x,y): #x is the key, y is the value
-        SkPy = type("","",type("","",type("","",file("code")).Sk).ffi).remapToPy
-        read = type("","",type("","",file("code")).jQuery).attr
-        #read the properties, as stored by Skulpt
-        d = read(self,type("","","$d").v)
-        #assign a Python property to self
-        d[SkPy(x)]=y
-        #if this isn't a Python property, it must be a Javascript property
-        if str(x) not in ['v','w','n']:
-            #print "<set",self.v,x,"=",y,">"
-            #try setting the property x of self to y.v, otherwise, set it to y
-            try:
-                read(self.v,x,type("","",y).v)
-            except:
-                read(self.v,x,y)
-    def __setitem__(self,key,value):
-        #print "<seti",self.v,key,value,">"
-        self.__setattr__(type("","",key).v,value)
-#o creates a variable with the attributes of x
-o=lambda x:type("","",x)
-#jsvar is for window children variables
-jsvar=lambda *a:(type("","",file("code")) if len(a)==0 else getattr(type("","",jsvar(*a[:-1])),a[-1]))
-#jsobj is for variables that are children of any other JS or PY variable
-jsobj=lambda *a:(type("","",a[0]) if len(a)==1 else getattr(type("","",jsobj(*a[:-1])),a[-1]))
-#v returns the actual value of x
-v = lambda x:type("","",x).v
+        FxCl = glcr("","",glcr("","",glcr("","",svyr("pbqr")).Fx).ssv).erzncGbCl
+        #vs k vf nyernql n cebcregl bs frys, erghea vg
+        vs FxCl(k) va qve(frys):
+            e = trgngge(frys,FxCl(k))
+            erghea e
+        #guvf cebcregl unf abg orra ergevrirq lrg, gel gb erghea n wfb bowrpg bs gung cebcregl
+        gel:
+            e = trgngge(frys.j,FxCl(k))
+            erghea wfb(e,(frys.a+"." vs yra(frys.a)>0 ryfr "")+FxCl(k))
+        rkprcg:
+            erghea Abar
+    qrs __pnyy__(frys,*netf):
+        q = 0
+        vs q:cevag "<pnyy",frys.a,
+        o = 0
+        gel:
+            n = frys.i(*(glcr("","",k).i sbe k va netf))
+            o,p = ".i(.i)",n
+        rkprcg:
+            gel:
+                n = frys.i(*(k sbe k va netf))
+                o,p = ".i()",n
+            rkprcg:
+                gel:
+                    n = frys.j(*(glcr("","",k).i sbe k va netf))
+                    o,p = ".j(.i)",n
+                rkprcg:
+                    n = frys.j(*(k sbe k va netf))
+                    o,p = ".j()",n
+        vs q:cevag o,">"
+        erghea n
+    qrs __trgvgrz__(frys, xrl):
+        e = trgngge(frys.j,xrl)
+        erghea wfb(e,(frys.a+"." vs yra(frys.a)>0 ryfr "")+xrl)
+    qrs __frgngge__(frys,k,l): #k vf gur xrl, l vf gur inyhr
+        FxCl = glcr("","",glcr("","",glcr("","",svyr("pbqr")).Fx).ssv).erzncGbCl
+        ernq = glcr("","",glcr("","",svyr("pbqr")).wDhrel).ngge
+        #ernq gur cebcregvrf, nf fgberq ol Fxhycg
+        q = ernq(frys,glcr("","","$q").i)
+        #nffvta n Clguba cebcregl gb frys
+        q[FxCl(k)]=l
+        #vs guvf vfa'g n Clguba cebcregl, vg zhfg or n Wninfpevcg cebcregl
+        vs fge(k) abg va ['i','j','a']:
+            #cevag "<frg",frys.i,k,"=",l,">"
+            #gel frggvat gur cebcregl k bs frys gb l.i, bgurejvfr, frg vg gb l
+            gel:
+                ernq(frys.i,k,glcr("","",l).i)
+            rkprcg:
+                ernq(frys.i,k,l)
+    qrs __frgvgrz__(frys,xrl,inyhr):
+        #cevag "<frgv",frys.i,xrl,inyhr,">"
+        frys.__frgngge__(glcr("","",xrl).i,inyhr)
+#b perngrf n inevnoyr jvgu gur nggevohgrf bs k
+b=ynzoqn k:glcr("","",k)
+#wfine vf sbe jvaqbj puvyqera inevnoyrf
+wfine=ynzoqn *n:(glcr("","",svyr("pbqr")) vs yra(n)==0 ryfr trgngge(glcr("","",wfine(*n[:-1])),n[-1]))
+#wfbow vf sbe inevnoyrf gung ner puvyqera bs nal bgure WF be CL inevnoyr
+wfbow=ynzoqn *n:(glcr("","",n[0]) vs yra(n)==1 ryfr trgngge(glcr("","",wfbow(*n[:-1])),n[-1]))
+#i ergheaf gur npghny inyhr bs k
+i = ynzoqn k:glcr("","",k).i
 
-if __name__=="__main__": #example javascript variable accesses
-    j = jso()
-    j.jQuery.globalEval("Sk.builtins.jseval=function(a){return eval(a.v)};")
-    #jQuery methods
-    jq = j.jQuery
-    #Skulpt methods
-    Skf = j.Sk.ffi
-    SkJs = Skf.remapToJs
-    SkPy = Skf.remapToPy
-    Skbf = j.Sk.builtinFiles.files
-    #miscellaneous (deprecated?)
-    jsread = lambda a,b:jq.attr(a,v(b))
-    jswrite = lambda a,b,c:jq.attr(a,v(b),v(c))
+vs __anzr__=="__znva__": #rknzcyr wninfpevcg inevnoyr npprffrf
+    w = wfb()
+    w.wDhrel.tybonyRiny("Fx.ohvygvaf.wfriny=shapgvba(n){erghea riny(n.i)};")
+    #wDhrel zrgubqf
+    wd = w.wDhrel
+    #Fxhycg zrgubqf
+    Fxs = w.Fx.ssv
+    FxWf = Fxs.erzncGbWf
+    FxCl = Fxs.erzncGbCl
+    Fxos = w.Fx.ohvygvaSvyrf.svyrf
+    #zvfpryynarbhf (qrcerpngrq?)
+    wfernq = ynzoqn n,o:wd.ngge(n,i(o))
+    wfjevgr = ynzoqn n,o,p:wd.ngge(n,i(o),i(p))
 
-#helper functions
-def props(w,exclude=[],name=""):
-    print "-"*25*2
-    if name<>"":
-        print name
-        print "."*25*2
-    for z in dir(w):
-        try:
-            if z not in exclude:
-                print z,getattr(w,z)
-        except:
-            print "<unreadable>"
-    if name<>"":
-        print "."*25*2
-def mydir(w,exclude=[],name=""):
-    print "-"*25*2
-    if name<>"":
-        print name
-        print "."*25*2
-    for z in dir(w):print z
-    if name<>"":print "."*25*2
-func_code_str = jseval("(function(x){try{return Sk.builtin.str(x.func_code.toString())}catch(e){return Sk.builtin.str(x.toString())}})")
+#urycre shapgvbaf
+qrs cebcf(j,rkpyhqr=[],anzr=""):
+    cevag "-"*25*2
+    vs anzr<>"":
+        cevag anzr
+        cevag "."*25*2
+    sbe m va qve(j):
+        gel:
+            vs m abg va rkpyhqr:
+                cevag m,trgngge(j,m)
+        rkprcg:
+            cevag "<haernqnoyr>"
+    vs anzr<>"":
+        cevag "."*25*2
+qrs zlqve(j,rkpyhqr=[],anzr=""):
+    cevag "-"*25*2
+    vs anzr<>"":
+        cevag anzr
+        cevag "."*25*2
+    sbe m va qve(j):cevag m
+    vs anzr<>"":cevag "."*25*2
+shap_pbqr_fge = wfriny("(shapgvba(k){gel{erghea Fx.ohvygva.fge(k.shap_pbqr.gbFgevat())}pngpu(r){erghea Fx.ohvygva.fge(k.gbFgevat())}})")
 
-if 0:#object getters and setter test
-    #this imitates Skulpt's getters and setters
-    class getset():
-        def __getattr__(self,x):
-            print "<get "+SkPy(x)+">",
-            r = read(self,"$d")
-            if SkPy(x) in r:
-                print "<"+str(r[SkPy(x)])+">"
-                return r[SkPy(x)]
-            print
-        def __setattr__(self,x,y):
-            print "<set "+SkPy(x)+"="+str(y)+">"
-            d = read(self,"$d")
-            d[SkPy(x)]=y
+vs 0:#bowrpg trggref naq frggre grfg
+    #guvf vzvgngrf Fxhycg'f trggref naq frggref
+    pynff trgfrg():
+        qrs __trgngge__(frys,k):
+            cevag "<trg "+FxCl(k)+">",
+            e = ernq(frys,"$q")
+            vs FxCl(k) va e:
+                cevag "<"+fge(e[FxCl(k)])+">"
+                erghea e[FxCl(k)]
+            cevag
+        qrs __frgngge__(frys,k,l):
+            cevag "<frg "+FxCl(k)+"="+fge(l)+">"
+            q = ernq(frys,"$q")
+            q[FxCl(k)]=l
 
-    print "O"*50
-    mc = getset()
-    mc.a = 5
-    mc.b = 6
-    mc.a = 7
-    props(mc,[],"jsobject")
-    print
-    print mc.a
-    print mc.b
+    cevag "B"*50
+    zp = trgfrg()
+    zp.n = 5
+    zp.o = 6
+    zp.n = 7
+    cebcf(zp,[],"wfbowrpg")
+    cevag
+    cevag zp.n
+    cevag zp.o
 
-if 0: #simplegui Frame
-    import simplegui
+vs 0: #fvzcyrthv Senzr
+    vzcbeg fvzcyrthv
 
-    message = "Welcome!"
+    zrffntr = "Jrypbzr!"
 
-    # Create a frame and assign callbacks to event handlers
-    frame = simplegui.create_frame("Home", 300, 200)
+    # Perngr n senzr naq nffvta pnyyonpxf gb rirag unaqyref
+    senzr = fvzcyrthv.perngr_senzr("Ubzr", 300, 200)
 
-    # Handler for mouse click
-    def click():
-        global message
-        #w = o(jsobj(frame,"frame_window"))
-        #w.alert(v("Great!"))
-        w = jso(frame).frame_window
-        w.alert(v("Great!"))
-        message = "Good job! "# + str(w.prompt(v("msg"),v("dft")))
+    # Unaqyre sbe zbhfr pyvpx
+    qrs pyvpx():
+        tybony zrffntr
+        #j = b(wfbow(senzr,"senzr_jvaqbj"))
+        #j.nyreg(i("Terng!"))
+        j = wfb(senzr).senzr_jvaqbj
+        j.nyreg(i("Terng!"))
+        zrffntr = "Tbbq wbo! "# + fge(j.cebzcg(i("zft"),i("qsg")))
 
-    # Handler to draw on canvas
-    def draw(canvas):
-        canvas.draw_text(message, [50,112], 48, "Red")
+    # Unaqyre gb qenj ba pnainf
+    qrs qenj(pnainf):
+        pnainf.qenj_grkg(zrffntr, [50,112], 48, "Erq")
 
-    frame.add_button("Click me", click)
-    frame.set_draw_handler(draw)
+    senzr.nqq_ohggba("Pyvpx zr", pyvpx)
+    senzr.frg_qenj_unaqyre(qenj)
 
-    # Start the frame animation
-    frame.start()
+    # Fgneg gur senzr navzngvba
+    senzr.fgneg()
 
-    #test(frame)
-    print jso(frame).frame_window.document.location.href
-    print jso(frame).frame_window.document.title
-    jso(frame).frame_window.document.body.style.backgroundColor="#C0C0C0"
+    #grfg(senzr)
+    cevag wfb(senzr).senzr_jvaqbj.qbphzrag.ybpngvba.uers
+    cevag wfb(senzr).senzr_jvaqbj.qbphzrag.gvgyr
+    wfb(senzr).senzr_jvaqbj.qbphzrag.obql.fglyr.onpxtebhaqPbybe="#P0P0P0"
 
-    size = [jso(frame).frame_window.outerWidth.v,
-            jso(frame).frame_window.outerHeight.v]
-    print size
-    jso(frame).frame_window.moveTo(0,0)
-    jso(frame).frame_window.resizeTo(573,250+34*2)
-    #frame.stop()
-    pass
+    fvmr = [wfb(senzr).senzr_jvaqbj.bhgreJvqgu.i,
+            wfb(senzr).senzr_jvaqbj.bhgreUrvtug.i]
+    cevag fvmr
+    wfb(senzr).senzr_jvaqbj.zbirGb(0,0)
+    wfb(senzr).senzr_jvaqbj.erfvmrGb(573,250+34*2)
+    #senzr.fgbc()
+    cnff
 
-if 1: #create JS modules
-    import sys
-    sys.path.append('src/js')
+vs 1: #perngr WF zbqhyrf
+    vzcbeg flf
+    flf.cngu.nccraq('fep/wf')
 
-    mod = """var $builtinmodule = function(name){var mod = {};return mod;}"""
+    zbq = """ine $ohvygvazbqhyr = shapgvba(anzr){ine zbq = {};erghea zbq;}"""
 
-    j.Sk.builtinFiles.files['src/lib/modl.js']=mod
-    j.Sk.builtinFiles.files['src/builtin/modb.js']=mod
-    j.Sk.builtinFiles.files['./modc.js']=mod
-    j.Sk.builtinFiles.files['src/js/moda.js']=mod
+    w.Fx.ohvygvaSvyrf.svyrf['fep/yvo/zbqy.wf']=zbq
+    w.Fx.ohvygvaSvyrf.svyrf['fep/ohvygva/zbqo.wf']=zbq
+    w.Fx.ohvygvaSvyrf.svyrf['./zbqp.wf']=zbq
+    w.Fx.ohvygvaSvyrf.svyrf['fep/wf/zbqn.wf']=zbq
 
-    import modl;import modb;import modc;import moda
+    vzcbeg zbqy;vzcbeg zbqo;vzcbeg zbqp;vzcbeg zbqn
 
-if 0:
-    jseval("Sk.orig = Sk.orig||Sk.builtinFiles.files;")
-    try:
-        import document
-    except:
-        jseval("""jQuery.getScript("http://www.skulpt.org/static/skulpt-stdlib.js",
-        function(){
-            for (z in Sk.builtinFiles.files){if (Sk.builtinFiles.files[z].slice(0,25)=='raise NotImplementedError'){delete Sk.builtinFiles.files[z]}}
-            for (z in Sk.orig){Sk.builtinFiles.files[z]=Sk.orig[z];}
-            document.querySelector("#reset").click;
-            document.querySelector("#run").click();})""")
-    #print j.Sk.builtinFiles.files['src/lib/document/__init__.js']
-    mydir(Skbf.w)
+vs 0:
+    wfriny("Fx.bevt = Fx.bevt||Fx.ohvygvaSvyrf.svyrf;")
+    gel:
+        vzcbeg qbphzrag
+    rkprcg:
+        wfriny("""wDhrel.trgFpevcg("uggc://jjj.fxhycg.bet/fgngvp/fxhycg-fgqyvo.wf",
+        shapgvba(){
+            sbe (m va Fx.ohvygvaSvyrf.svyrf){vs (Fx.ohvygvaSvyrf.svyrf[m].fyvpr(0,25)=='envfr AbgVzcyrzragrqReebe'){qryrgr Fx.ohvygvaSvyrf.svyrf[m]}}
+            sbe (m va Fx.bevt){Fx.ohvygvaSvyrf.svyrf[m]=Fx.bevt[m];}
+            qbphzrag.dhrelFryrpgbe("#erfrg").pyvpx;
+            qbphzrag.dhrelFryrpgbe("#eha").pyvpx();})""")
+    #cevag w.Fx.ohvygvaSvyrf.svyrf['fep/yvo/qbphzrag/__vavg__.wf']
+    zlqve(Fxos.j)
 
-if __name__=="__main__": #import poc_simpletests
-    import poc_simpletest as poc
-    pst = poc.TestSuite()
-    def run_test(self, computed, expected, message = ""):
-        self.total_tests += 1
-        print ":)" if computed == expected else ":O",self.total_tests,message,
-        if computed != expected:
-            print " Computed: " + str(computed) + \
-                            " Expected: " + str(expected),
-            self.failures += 1
-        print computed
-    pst.run = lambda *x:run_test(pst,*x)
-    pst.report = pst.report_results
-if __name__=="__main__": #run poc_simpletest tests
-    if 1:
-        t = str(jsmillis())[-6:]
-        j.document.title = t
-        pst.run(str(j.document.title)
-                ,t,"set .title")
+vs __anzr__=="__znva__": #vzcbeg cbp_fvzcyrgrfgf
+    vzcbeg cbp_fvzcyrgrfg nf cbp
+    cfg = cbp.GrfgFhvgr()
+    qrs eha_grfg(frys, pbzchgrq, rkcrpgrq, zrffntr = ""):
+        frys.gbgny_grfgf += 1
+        cevag ":)" vs pbzchgrq == rkcrpgrq ryfr ":B",frys.gbgny_grfgf,zrffntr,
+        vs pbzchgrq != rkcrpgrq:
+            cevag " Pbzchgrq: " + fge(pbzchgrq) + \
+                            " Rkcrpgrq: " + fge(rkcrpgrq),
+            frys.snvyherf += 1
+        cevag pbzchgrq
+    cfg.eha = ynzoqn *k:eha_grfg(cfg,*k)
+    cfg.ercbeg = cfg.ercbeg_erfhygf
+vs __anzr__=="__znva__": #eha cbp_fvzcyrgrfg grfgf
+    vs 1:
+        g = fge(wfzvyyvf())[-6:]
+        w.qbphzrag.gvgyr = g
+        cfg.eha(fge(w.qbphzrag.gvgyr)
+                ,g,"frg .gvgyr")
 
-        t = "CodeSkulpted!"
-        j.document['title']=t
-        pst.run(str(j.document['title'])
-                ,t,"set ['title']")
+        g = "PbqrFxhycgrq!"
+        w.qbphzrag['gvgyr']=g
+        cfg.eha(fge(w.qbphzrag['gvgyr'])
+                ,g,"frg ['gvgyr']")
 
-        t = ""
-        j.document.body.style.backgroundColor = t
-        pst.run(str(j.document.body.style.backgroundColor)
-                ,t,"set .backgroundColor")
+        g = ""
+        w.qbphzrag.obql.fglyr.onpxtebhaqPbybe = g
+        cfg.eha(fge(w.qbphzrag.obql.fglyr.onpxtebhaqPbybe)
+                ,g,"frg .onpxtebhaqPbybe")
 
-        t = "rgb(220, 220, 220)"
-        j.document.body.style['backgroundColor'] = t
-        pst.run(str(j.document.body.style['backgroundColor'])
-                ,t,"set ['backgroundColor']")
+        g = "eto(220, 220, 220)"
+        w.qbphzrag.obql.fglyr['onpxtebhaqPbybe'] = g
+        cfg.eha(fge(w.qbphzrag.obql.fglyr['onpxtebhaqPbybe'])
+                ,g,"frg ['onpxtebhaqPbybe']")
 
-        pst.run(v(4)==4,True,"v(4)==4")
-        pst.run(v("hello")==o("hello").v,True,"v('hello')==hello")
+        cfg.eha(i(4)==4,Gehr,"i(4)==4")
+        cfg.eha(i("uryyb")==b("uryyb").i,Gehr,"i('uryyb')==uryyb")
 
-        jq.attr(jsvar("document"),v("title"),v("hack"))
-        pst.run(str(j.document.title)=="hack",True,"set attr using jq.attr")
-        j.document.title = "CodeSkulptor"
+        wd.ngge(wfine("qbphzrag"),i("gvgyr"),i("unpx"))
+        cfg.eha(fge(w.qbphzrag.gvgyr)=="unpx",Gehr,"frg ngge hfvat wd.ngge")
+        w.qbphzrag.gvgyr = "PbqrFxhycgbe"
 
-        #j.alert('hello')
-        #t = j.confirm('msg')
-        #pst.run(str(t) in ['True','False'],True,'javascript confirms as boolean strings')
+        #w.nyreg('uryyb')
+        #g = w.pbasvez('zft')
+        #cfg.eha(fge(g) va ['Gehr','Snyfr'],Gehr,'wninfpevcg pbasvezf nf obbyrna fgevatf')
 
-        txt = "hello"
-        b64 = "aGVsbG8="
-        pst.run(str(j.btoa(txt)),b64,"base64 encoding")
-        pst.run(str(j.atob(b64)),txt,"base64 decoding")
+        gkg = "uryyb"
+        o64 = "nTIfoT8="
+        cfg.eha(fge(w.ogbn(gkg)),o64,"onfr64 rapbqvat")
+        cfg.eha(fge(w.ngbo(o64)),gkg,"onfr64 qrpbqvat")
 
-        pst.run(str(j.location.href),str(j.document.URL),"location")
+        cfg.eha(fge(w.ybpngvba.uers),fge(w.qbphzrag.HEY),"ybpngvba")
 
-        t = "test="+str(jsmillis())
-        j.document.cookie = t
-        #print filter(lambda x:x[0:2]<>"__"
-        #             ,str(j.document.cookie).split("; "))
-        pst.run(t in str(j.document.cookie),True,"setting cookies")
+        g = "grfg="+fge(wfzvyyvf())
+        w.qbphzrag.pbbxvr = g
+        #cevag svygre(ynzoqn k:k[0:2]<>"__"
+        #             ,fge(w.qbphzrag.pbbxvr).fcyvg("; "))
+        cfg.eha(g va fge(w.qbphzrag.pbbxvr),Gehr,"frggvat pbbxvrf")
 
-        t = {"ok":1,"oo":2}
-        u = str(t).replace("'",'"') #JSON uses " instead of '
-        pst.run(SkPy(jq.parseJSON(u)),t,"Dict->String->JS->Py")
+        g = {"bx":1,"bb":2}
+        h = fge(g).ercynpr("'",'"') #WFBA hfrf " vafgrnq bs '
+        cfg.eha(FxCl(wd.cnefrWFBA(h)),g,"Qvpg->Fgevat->WF->Cl")
 
-    for z in ['outerHeight','outerWidth',
-              'devicePixelRatio']:
-        pst.run(str(j[z]),str(jsvar(z)),z)
+    sbe m va ['bhgreUrvtug','bhgreJvqgu',
+              'qrivprCvkryEngvb']:
+        cfg.eha(fge(w[m]),fge(wfine(m)),m)
 
-    for z in [['Cookie',j.document.cookie],
-              ['UserAgent',j.navigator.userAgent]]:
-        pst.run(len(str(z[1]))>0,True,z[0]+":"+str(z[1]))
+    sbe m va [['Pbbxvr',w.qbphzrag.pbbxvr],
+              ['HfreNtrag',w.anivtngbe.hfreNtrag]]:
+        cfg.eha(yra(fge(m[1]))>0,Gehr,m[0]+":"+fge(m[1]))
 
-    for z in ['modl','modb','modc','moda']:
-        if z in globals():
-            pst.run(globals()[z].__name__,z,"Importing Module:"+z)
+    sbe m va ['zbqy','zbqo','zbqp','zbqn']:
+        vs m va tybonyf():
+            cfg.eha(tybonyf()[m].__anzr__,m,"Vzcbegvat Zbqhyr:"+m)
 
-    jseval("Sk.builtins.jstest=function(x){window.test=x;console.log(x)}")
-    #jseval("alert(333);")
-    #jseval("Sk.builtins.toJSON=function(x){return Sk.builtin.str(JSON.stringify(x));}")
+    wfriny("Fx.ohvygvaf.wfgrfg=shapgvba(k){jvaqbj.grfg=k;pbafbyr.ybt(k)}")
+    #wfriny("nyreg(333);")
+    #wfriny("Fx.ohvygvaf.gbWFBA=shapgvba(k){erghea Fx.ohvygva.fge(WFBA.fgevatvsl(k));}")
 
-    tSkJs = o(jsvar("Sk","ffi")).remapToJs
-    tjSkJs = j.Sk.ffi.remapToJs
+    gFxWf = b(wfine("Fx","ssv")).erzncGbWf
+    gwFxWf = w.Fx.ssv.erzncGbWf
 
-    pst.run(v("hello"),tSkJs("hello"),"v()==tSkJs")
-    pst.run(tjSkJs("hello"),v("hello"),"tjSkJs()==v()")
+    cfg.eha(i("uryyb"),gFxWf("uryyb"),"i()==gFxWf")
+    cfg.eha(gwFxWf("uryyb"),i("uryyb"),"gwFxWf()==i()")
 
-    #props(j.e.GoogleData.w)
-    print;pst.report()
+    #cebcf(w.r.TbbtyrQngn.j)
+    cevag;cfg.ercbeg()
