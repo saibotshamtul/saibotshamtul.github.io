@@ -1,0 +1,40 @@
+<svg width="140" height="140" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:svg="http://www.w3.org/2000/svg">
+
+<rect x="0" y="0" width="140" height="140" fill="#ddd" />
+
+<!-- middle square -->
+<rect x="50" y="50" width="40" height="40" style="stroke:royalblue;fill:transparent;" />
+
+<!-- middle cross -->
+<line x1="70" x2="70" y1="60" y2="80" style="stroke:blue;" />
+<line x1="60" x2="80" y1="70" y2="70" style="stroke:blue;" />
+
+<!-- step 1 -->
+<rect x="70" y="40" height="10" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="50" y="90" height="10" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="40" y="50" height="20" width="10" style="stroke:royalblue;fill:transparent;"/>
+<rect x="90" y="70" height="20" width="10" style="stroke:royalblue;fill:transparent;"/>
+
+<!-- step 2 -->
+<rect x="70" y="20" height="20" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="50" y="100" height="20" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="20" y="50" height="20" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="100" y="70" height="20" width="20" style="stroke:royalblue;fill:transparent;"/>
+
+<!-- step 3 -->
+<rect x="70" y="10" height="10" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="50" y="120" height="10" width="20" style="stroke:royalblue;fill:transparent;"/>
+<rect x="10" y="50" height="20" width="10" style="stroke:royalblue;fill:transparent;"/>
+<rect x="120" y="70" height="20" width="10" style="stroke:royalblue;fill:transparent;"/>
+
+<!-- step 4 -->
+<rect x="70" y="00" height="10" width="10" style="stroke:royalblue;fill:transparent;"/>
+<rect x="60" y="130" height="10" width="10" style="stroke:royalblue;fill:transparent;"/>
+<rect x="00" y="60" height="10" width="10" style="stroke:royalblue;fill:transparent;"/>
+<rect x="130" y="70" height="10" width="10" style="stroke:royalblue;fill:transparent;"/>
+
+
+</svg>
