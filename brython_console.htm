@@ -38,6 +38,13 @@
     <textarea id=code class=codearea rows=50></textarea>
 
     <script type="text/python3" orig_src="http://brython.info/tests/console.py">
+class cli(object):
+    def clear():
+        for _ in (_ for _ in range(53)):
+            print()
+    def cls():
+        cli.clear()
+        
 import sys
 import traceback
 
@@ -115,7 +122,9 @@ _status = "main"  # or "block" if typing inside a block
 editor_ns = {'credits':credits,
     'copyright':copyright,
     'license':license,
-    '__name__':'__main__'}  
+    '__name__':'__main__',
+    'cli':cli
+    }  
 
 def cursorToEnd(*args):
     pos = len(doc['code'].value)
