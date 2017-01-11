@@ -38,13 +38,24 @@
     <textarea id=code class=codearea rows=50></textarea>
 
     <script type="text/python3" orig_src="http://brython.info/tests/console.py">
+import re
+import subprocess
 class cli(object):
     def clear():
-        for _ in (_ for _ in range(53)):
+        for _ in (_ for _ in range(50)):
             print()
     def cls():
         cli.clear()
-        
+    def sumlen(x):
+        return {"sum":sum(x),"len":len(x)}
+    def shell(x):
+        return subprocess.call(re.split(" ",x))
+    def ctns(a,b):
+        return [sum(a),sum([a[x]*b[x] for x in range(len(a))])]
+    def sumctnswgt(a,b=2):
+        return [sum([a[x] for x in range(y,len(a),b)]) for y in range(b)]
+    scw = sumctnswgt
+
 import sys
 import traceback
 
