@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Brython interactive mode</title>
+    <meta charset="UTF-8">
+    <meta name=robots content="index, follow">
+    <meta name=description content=Brython >
+    <meta name=author content="Pierre Quentel">
+    <meta name=keywords content="Python, Brython">
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <noscript>Please enable Javascript to view this page correctly.</noscript>
+
+    <link rel=stylesheet href="http://brython.info/doc/doc_brython.css">
+
+    <script src="http://brython.info/src/brython.js"></script>
+
+    <style>
+    .codearea {
+        background-color:#ddd;
+        color:#000;
+        font-family:'Oxygen Mono', Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace;
+        font-size:14px;
+        overflow:auto
+    }
+    div, textarea {
+        height:100%;
+        width:98%
+    }
+    </style>
+</head>
+
+
+<body onload="brython(1)">
+    <textarea id=code class=codearea rows=50></textarea>
+
+    <script type="text/python3" src="http://brython.info/tests/console.py"></script>
+
+</body>
+
+</html>
