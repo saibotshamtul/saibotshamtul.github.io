@@ -41,11 +41,6 @@
 import re
 import subprocess
 class cli(object):
-    def clear():
-        for _ in (_ for _ in range(50)):
-            print()
-    def cls():
-        cli.clear()
     def sumlen(x):
         return {"sum":sum(x),"len":len(x)}
     def shell(x):
@@ -129,12 +124,20 @@ history = []
 current = 0
 _status = "main"  # or "block" if typing inside a block
 
+class versioninfo(object):
+    def __str__(self):
+        v = sys.implementation.version
+        return "Brython %s.%s.%s on %s %s" % (v[0], v[1], v[2], window.navigator.appName, window.navigator.appVersion)
+    def __repr__(self):
+        return str(self)
+
 # execution namespace
 editor_ns = {'credits':credits,
     'copyright':copyright,
     'license':license,
     '__name__':'__main__',
-    'cli':cli
+    'cli':cli,
+    'cls' : lambda:([setattr(x,'value','') for x in [doc['code']]] + [versioninfo()])[1]
     }  
 
 def cursorToEnd(*args):
@@ -265,9 +268,10 @@ def myKeyDown(event):
 doc['code'].bind('keypress', myKeyPress)
 doc['code'].bind('keydown', myKeyDown)
 doc['code'].bind('click', cursorToEnd)
-v = sys.implementation.version
-doc['code'].value = "Brython %s.%s.%s on %s %s\n>>> " % (
-    v[0], v[1], v[2], window.navigator.appName, window.navigator.appVersion)
+#v = sys.implementation.version
+#doc['code'].value = "Brython %s.%s.%s on %s %s\n>>> " % (
+#    v[0], v[1], v[2], window.navigator.appName, window.navigator.appVersion)
+doc['code'].value = str(versioninfo())+"\n>>> "
 #doc['code'].value += 'Type "copyright", "credits" or "license" for more information.'
 doc['code'].focus()
 cursorToEnd()
