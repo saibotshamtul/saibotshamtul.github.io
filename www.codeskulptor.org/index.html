@@ -149,7 +149,8 @@ function runit(recurse) {
        $.get(yql,function(r){
          window.YQLResponse=r;
          //$("#code").text(r.firstChild.firstChild.firstChild.children[3].textContent);
-         Sk.builtinFiles.files["./"+fn]=r.firstChild.firstChild.firstChild.children[3].textContent;
+         //Sk.builtinFiles.files["./"+fn]=r.firstChild.firstChild.firstChild.children[3].textContent;
+	 Sk.builtinFiles.files['./'+fn]=r.querySelector('content').textContent;
          if (!recurse){
            runit(true);
          }
@@ -186,7 +187,8 @@ if(window.location.hash) {
   $.get(yql,function(r){
     //$("#source").text(':'+r.documentElement.children[0].children[0].children[0].textContent+':');
     window.YQLResponse=r;
-    $("#code").text(r.firstChild.firstChild.firstChild.children[3].textContent);
+    //$("#code").text(r.firstChild.firstChild.firstChild.children[3].textContent);
+    $("#code").text(r.querySelector('content').textContent);
     //myCodeMirror = CodeMirror.fromTextArea(code);
     //myCodeMirror.doc.setValue(r.firstChild.firstChild.firstChild.children[3].textContent);
   });
